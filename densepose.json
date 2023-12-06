@@ -11,6 +11,11 @@
        "dir": "app/pretrained_models/MagicAnimate/densepose_controlnet" 
     }
   }, {
+    "method": "fs.rm",
+    "params": {
+       "path": "app/pretrained_models/MagicAnimate/densepose_controlnet/config.json"
+    }
+  }, {
     "method": "fs.download",
     "params": {
        "uri": "https://huggingface.co/zcxu-eric/MagicAnimate/raw/main/densepose_controlnet/config.json",

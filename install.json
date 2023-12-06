@@ -24,6 +24,8 @@
         "cd pretrained_models",
         "git clone https://huggingface.co/zcxu-eric/MagicAnimate",
         "git clone https://huggingface.co/bdsqlsz/stable-diffusion-v1-5",
+        "rd /s /q MagicAnimate/.git",
+        "rd /s /q stable-diffusion-v1-5/.git",
         "cd ..",
         "cd .."
       ]
