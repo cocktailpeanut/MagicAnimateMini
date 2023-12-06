@@ -1,0 +1,31 @@
+{
+  "run": [{
+    "method": "fs.rm",
+    "params": {
+       "path": "app/pretrained_models/MagicAnimate/densepose_controlnet/diffusion_pytorch_model.safetensors" 
+    }
+  }, {
+    "method": "fs.download",
+    "params": {
+       "uri": "https://huggingface.co/zcxu-eric/MagicAnimate/resolve/main/densepose_controlnet/diffusion_pytorch_model.safetensors?download=true",
+       "dir": "app/pretrained_models/MagicAnimate/densepose_controlnet" 
+    }
+  }, {
+    "method": "fs.download",
+    "params": {
+       "uri": "https://huggingface.co/zcxu-eric/MagicAnimate/raw/main/densepose_controlnet/config.json",
+       "dir": "app/pretrained_models/MagicAnimate/densepose_controlnet" 
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Download Complete",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=MagicAnimateMini"
+    }
+  }]
+}

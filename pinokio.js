@@ -18,8 +18,13 @@ module.exports = {
           target: "_blank"
         }, {
           icon: "fa-solid fa-download",
-          text: "Download Openpose Model",
+          text: "Use Openpose Model",
           href: "openpose.json",
+          params: { fullscreen: true, run: true }
+        }, {
+          icon: "fa-solid fa-download",
+          text: "Use Densepose Model",
+          href: "densepose.json",
           params: { fullscreen: true, run: true }
         }]
       } else {
@@ -30,8 +35,13 @@ module.exports = {
           params: { fullscreen: true, run: true, mode: "single" }
         }, {
           icon: "fa-solid fa-download",
-          text: "Download Openpose Model",
+          text: "Use Openpose Model",
           href: "openpose.json",
+          params: { fullscreen: true, run: true }
+        }, {
+          icon: "fa-solid fa-download",
+          text: "Use Densepose Model",
+          href: "densepose.json",
           params: { fullscreen: true, run: true }
         }]
       }
