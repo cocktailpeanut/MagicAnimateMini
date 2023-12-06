@@ -1,0 +1,43 @@
+{
+  "cmds": {
+    "nvidia": "pip install torch torchvision torchaudio xformers --index-url https://download.pytorch.org/whl/cu118",
+    "amd": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6",
+    "default": "pip install torch torchvision torchaudio"
+  },
+  "requires": [{
+    "type": "conda",
+    "name": "ffmpeg",
+    "args": "-c conda-forge"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "venv": "env",
+      "message": [
+        "git clone https://github.com/sdbds/magic-animate-for-windows app",
+        "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}",
+        "pip install nvidia-pyindex",
+        "pip install -r requirements.txt",
+        "pip install {{platform === 'darwin' ? 'eva-decord' : 'decord'}}",
+        "cd app",
+        "mkdir pretrained_models",
+        "cd pretrained_models",
+        "git clone https://huggingface.co/zcxu-eric/MagicAnimate",
+        "git clone https://huggingface.co/bdsqlsz/stable-diffusion-v1-5",
+        "cd ..",
+        "cd .."
+      ]
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Install Success",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=MagicAnimate"
+    }
+  }]
+}
