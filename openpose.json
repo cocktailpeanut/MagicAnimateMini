@@ -11,6 +11,12 @@
        "dir": "app/pretrained_models/MagicAnimate/densepose_controlnet" 
     }
   }, {
+    "method": "fs.download",
+    "params": {
+       "uri": "https://huggingface.co/lllyasviel/control_v11p_sd15_openpose/raw/main/config.json",
+       "dir": "app/pretrained_models/MagicAnimate/densepose_controlnet" 
+    }
+  }, {
     "method": "input",
     "params": {
       "title": "Download Complete",
