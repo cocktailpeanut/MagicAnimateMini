@@ -28,6 +28,11 @@ module.exports = {
           text: "Launch",
           href: "start.json",
           params: { fullscreen: true, run: true, mode: "single" }
+        }, {
+          icon: "fa-solid fa-download",
+          text: "Download Openpose Model",
+          href: "openpose.json",
+          params: { fullscreen: true, run: true }
         }]
       }
     } else {
