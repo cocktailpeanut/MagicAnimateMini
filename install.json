@@ -14,7 +14,7 @@
     "params": {
       "venv": "env",
       "message": [
-        "git clone https://github.com/sdbds/magic-animate-for-windows app",
+        "git clone https://github.com/peanutcocktail/magic-animate-for-windows app",
         "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}",
         "pip install nvidia-pyindex",
         "pip install -r requirements.txt",
