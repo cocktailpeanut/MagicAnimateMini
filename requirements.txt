@@ -114,7 +114,7 @@ xxhash==3.3.0
 yarl==1.9.2
 #zipp==3.16.2
 zipp
-#decord
+decord
 imageio==2.9.0
 imageio-ffmpeg==0.4.3
 timm
