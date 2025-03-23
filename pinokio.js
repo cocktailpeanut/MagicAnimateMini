@@ -10,7 +10,7 @@ module.exports = {
       let updating = await kernel.running(__dirname, "update.js")
       let installing = await kernel.running(__dirname, "install.js")
       if (running) {
-        let local = info.local("start.js")
+        let local = info.local("start.json")
         if (local && local.url) {
           return [{
             default: true,
