@@ -31,9 +31,9 @@ module.exports = async (kernel) => {
       "params": {
         "venv": "env",
         "message": [
+          "uv pip install nvidia-pyindex",
           cmd,
-          "pip install nvidia-pyindex",
-          "pip install -r requirements.txt",
+          "uv pip install -r requirements.txt",
         ]
       }
     }, {
