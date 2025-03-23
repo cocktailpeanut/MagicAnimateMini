@@ -30,6 +30,7 @@ module.exports = async (kernel) => {
       "method": "shell.run",
       "params": {
         "venv": "env",
+        "build": true,
         "message": [
           "uv pip install nvidia-pyindex",
           cmd,
