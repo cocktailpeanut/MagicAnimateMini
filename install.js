@@ -32,8 +32,8 @@ module.exports = async (kernel) => {
         "venv": "env",
         "build": true,
         "message": [
-          "uv pip install nvidia-pyindex",
           cmd,
+          "uv pip install nvidia-pyindex",
           "uv pip install -r requirements.txt",
         ]
       }
